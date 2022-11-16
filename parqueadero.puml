@@ -1,0 +1,28 @@
+@startuml
+
+class Parqueadero{
+usuario
+plazas_disponibles
+registro()
+reserva()
+}
+
+class Coches{
+cantidad_vehiculos
+tipo_vehiculo()
+}
+
+class Horario{
+tiempodeparqueo()
+}
+
+class Cobro{
+precioapagar()
+}
+
+@enduml
+
+Parqueadero *-- Coches
+Coches *-- Horario
+Coches <|-- Cobro
+Horario <|-- Cobro
