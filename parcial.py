@@ -16,13 +16,19 @@ class Coches:
         self.cantidad_vehiculos = cantidad_vehiculos
 
     @property
-    def tipo_vehiculo():
-        pass
+    def tipo_vehiculo(self):
+        return self.tipo_vehiculo
     
+    @tipo_vehiculo.setter
+    def tipo_vehiculo(self, tipo):
+        if tipo != "SUV" or "Compacto" or "VAN":
+            print("Es correcto el tipo te vehiculo ingresado")
+        else:
+            print("No es un vehiculo disponible")
 class Horario:
 
     @property
-    def tiempodeparqueo():
+    def tiempodeparqueo(self):
         pass
 
 class Cobro:
